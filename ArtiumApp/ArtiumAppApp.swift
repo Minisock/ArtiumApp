@@ -12,6 +12,7 @@ struct ArtiumAppApp: App {
     var body: some Scene {
         WindowGroup {
             LessonListView()
+//			ContentView()
         }
     }
 }

@@ -1,0 +1,24 @@
+{
+  "originHash" : "6556c42d916ccb64fe1d19b41e6bc85f210fd854b45bf728e89166414fbbd0fe",
+  "pins" : [
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "state" : {
+        "revision" : "7deda23bbdca612076c5c315003d8638a08ed0f1",
+        "version" : "8.3.2"
+      }
+    },
+    {
+      "identity" : "nimbuscache",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vijay-subramani/NimbusCache",
+      "state" : {
+        "revision" : "c3f5df3c57dfe6d4a77bd64ec5d1a857a28bcb15",
+        "version" : "1.2.6"
+      }
+    }
+  ],
+  "version" : 3
+}

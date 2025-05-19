@@ -7,6 +7,8 @@
 
 import SwiftUI
 import AVKit
+import NimbusCache
+import Kingfisher
 
 struct LessonDetailView: View {
 	let lesson: Lesson
@@ -94,7 +96,13 @@ struct LessonDetailView: View {
 	
 	private func setupPlayer() {
 		guard let url = URL(string: lesson.video_url) else { return }
-		player = AVPlayer(url: url)
+		player = AVPlayer()
+		Task {
+			if let playerItem = await AVPlayerItem(url: url, isCacheEnabled: true) {
+				player = AVPlayer(playerItem: playerItem)
+				player!.play()
+			}
+		}
 	}
 	
 	private func togglePlayback() {

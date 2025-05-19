@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		08D220722DDB22600004B3E2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 08D220712DDB22600004B3E2 /* Kingfisher */; };
+		08D220772DDB30130004B3E2 /* NimbusCache in Frameworks */ = {isa = PBXBuildFile; productRef = 08D220762DDB30130004B3E2 /* NimbusCache */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		088F0E5C2DD8F98F000D8692 /* ArtiumApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtiumApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08D220722DDB22600004B3E2 /* Kingfisher in Frameworks */,
+				08D220772DDB30130004B3E2 /* NimbusCache in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +72,8 @@
 			);
 			name = ArtiumApp;
 			packageProductDependencies = (
+				08D220712DDB22600004B3E2 /* Kingfisher */,
+				08D220762DDB30130004B3E2 /* NimbusCache */,
 			);
 			productName = ArtiumApp;
 			productReference = 088F0E5C2DD8F98F000D8692 /* ArtiumApp.app */;
@@ -94,6 +103,10 @@
 			);
 			mainGroup = 088F0E532DD8F98F000D8692;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				08D220702DDB22600004B3E2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				08D220752DDB30130004B3E2 /* XCRemoteSwiftPackageReference "NimbusCache" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 088F0E5D2DD8F98F000D8692 /* Products */;
 			projectDirPath = "";
@@ -320,6 +333,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		08D220702DDB22600004B3E2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.3.2;
+			};
+		};
+		08D220752DDB30130004B3E2 /* XCRemoteSwiftPackageReference "NimbusCache" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vijay-subramani/NimbusCache";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		08D220712DDB22600004B3E2 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08D220702DDB22600004B3E2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		08D220762DDB30130004B3E2 /* NimbusCache */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08D220752DDB30130004B3E2 /* XCRemoteSwiftPackageReference "NimbusCache" */;
+			productName = NimbusCache;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 088F0E542DD8F98F000D8692 /* Project object */;
 }

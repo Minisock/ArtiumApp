@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct LessonListView: View {
 	@StateObject private var viewModel = LessonListViewModel()
@@ -45,23 +46,12 @@ struct LessonRowView: View {
 	var body: some View {
 		HStack(spacing: 12) {
 				// Lesson Image from API
-			AsyncImage(url: URL(string: lesson.lesson_image_url)) { phase in
-				switch phase {
-					case .empty:
-						ProgressView()
-					case .success(let image):
-						image.resizable()
-					case .failure:
-						Color.gray.opacity(0.3)
-//						Image(systemName: "photo")
-					@unknown default:
-						EmptyView()
-				}
-			}
-			.aspectRatio(1, contentMode: .fill)
-			.frame(width: 60, height: 60)
-			.cornerRadius(8)
-			.clipped()
+			KFImage(URL(string: lesson.lesson_image_url))
+				.resizable()
+				.aspectRatio(1, contentMode: .fill)
+				.frame(width: 60, height: 60)
+				.cornerRadius(8)
+				.clipped()
 			
 			VStack(alignment: .leading) {
 				Text(lesson.lesson_title)
